@@ -4,7 +4,7 @@ function ImagesCard({images}) {
     const tag=images.tags.split(",")
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
-        <img className="w-full" src={images.webformatURL} alt="" srcset=""/>
+        <img className="w-full cursor-pointer" src={images.webformatURL} alt="" srcset=""/>
         <div className="px-6 py-4">
           <div className="font-bold text-purple-500 text-xl mb-2">Photo by {images.user}</div>
         
@@ -26,7 +26,7 @@ function ImagesCard({images}) {
         <div className="px-6 py-4">
           {
               tag.map((tag,index) =>(
-                <span key={index}className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semiblod text-gray-700 mr-2">#{tag}</span>
+                <span key={index}className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semiblod text-gray-700 mr-2 ">#{tag}</span>
               ))
           }
         </div>

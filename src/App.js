@@ -22,12 +22,12 @@ function App() {
   
   return (
      <div className="container mx-auto">
-       <ImageSearch searchTerm={(text)=>setTerm(text)}/>
-        {isLoading ? "loading" : <div className="grid grid-cols-3 gap-4">
+       {isLoading ? "loading" : <ImageSearch searchTerm={(text)=>setTerm(text)}/>}
+        <div className="grid grid-cols-3 gap-4">
           {images.map(images =>(
             <ImagesCard key={images.id} images={images}/>
           ))}
-        </div>}
+        </div>
      </div>
     
   );
